@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>internalapp.nptel.ac.in/noc/Ecertificate/?q=NPTEL25PH27S125370399804743831</title>
+  <title>internalapp.nptel.ac.in</title>
   <style>
     body {
       margin: 0;
@@ -14,38 +14,38 @@
       align-items: center;
       height: 100vh;
     }
+
     .container {
       text-align: center;
     }
+
     .certificate-btn {
       background-color: #007bff;
       color: white;
-      padding: 15px 30px;
-      font-size: 20px;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 500;
       border: none;
-      border-radius: 8px;
+      border-radius: 3px;
       cursor: pointer;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
+      transition: background-color 0.2s ease;
     }
+
     .certificate-btn:hover {
       background-color: #0056b3;
     }
-    .label {
-      font-size: 22px;
-      margin-bottom: 20px;
-      color: #333;
-    }
+
     .query-text {
-      margin-top: 10px;
-      color: #666;
+      margin-top: 12px;
+      color: #555;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <div class="label">Click the button below to view your certificate</div>
-    <button class="certificate-btn" onclick="openCertificate()">Certificate</button>
+    <button class="certificate-btn" onclick="openCertificate()">Course Certificate</button>
     <div class="query-text" id="queryText"></div>
   </div>
 
@@ -56,19 +56,14 @@
     }
 
     function openCertificate() {
-      const q = getQueryParam("q");
-      // Option 1: Open a static PDF (ignore 'q')
       window.location.href = "Thermal%20physics.pdf";
-      
-      // Option 2: Use 'q' to open a dynamic PDF (example)
-      // window.location.href = `certificate_${q}.pdf`;
     }
 
-    // Show the query ID
     const q = getQueryParam("q");
     if (q) {
       document.getElementById("queryText").textContent = `Certificate ID: ${q}`;
     }
   </script>
+
 </body>
 </html>
